@@ -21,7 +21,7 @@ function initMap(){
 
 $(document).ready(function () { 
     
-    initMap();
+    //initMap();
     makeAjax();
     function makeAjax(){
         $.ajax({
@@ -32,6 +32,7 @@ $(document).ready(function () {
             success: function(data){
                 console.log(data);
                 $.each(data, function(i,v){
+                    
                     var result=distance(latitude,longitude,v.latitude,v.longitude);
                     console.log(result);
                     var location = {lat: parseFloat(v.latitude), lng: parseFloat(v.longitude)};
