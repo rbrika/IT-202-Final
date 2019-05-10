@@ -19,12 +19,7 @@ function initMap(){
   });
     
 };
-
-$(document).ready(function () { 
-    
-    initMap();
-    makeAjax();
-    function makeAjax(){
+function makeAjax(){
         $("#map1").empty();
         $.ajax({
             url: 'https://data.cityofchicago.org/resource/9rg7-mz9y.json',
@@ -72,6 +67,9 @@ $(document).ready(function () {
         y = (ln - lng0)*Math.cos(lat0);
         return deglen*Math.sqrt(x*x + y*y);
     }
-        
+$(document).ready(function () { 
     
+    initMap();
+    makeAjax();
+  
 });
