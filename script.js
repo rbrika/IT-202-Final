@@ -21,7 +21,7 @@ function initMap(){
 
 $(document).ready(function () { 
     
-    //initMap();
+    initMap();
     makeAjax();
     function makeAjax(){
         $.ajax({
