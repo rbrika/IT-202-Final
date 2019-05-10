@@ -69,7 +69,6 @@ function makeAjax(){
     }
 $(document).ready(function () { 
     
-    initMap();
     makeAjax();
   
 });
