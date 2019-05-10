@@ -11,6 +11,7 @@ function initMap(){
     var initialLocation = new google.maps.LatLng(latitude, longitude);
     map.setCenter(initialLocation);
     map.setZoom(19);
+        makeAjax();
   }, function(positionError) {
     // User denied geolocation prompt - default to Chicago
     map.setCenter(new google.maps.LatLng(41.8781, -87.6298));
