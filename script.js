@@ -1,3 +1,4 @@
+
 var latitude;
 var longitude;
 var map;
@@ -11,6 +12,7 @@ function initMap(){
     var initialLocation = new google.maps.LatLng(latitude, longitude);
     map.setCenter(initialLocation);
     map.setZoom(19);
+        makeAjax();
   }, function(positionError) {
     // User denied geolocation prompt - default to Chicago
     map.setCenter(new google.maps.LatLng(41.8781, -87.6298));
@@ -18,8 +20,12 @@ function initMap(){
   });
     
 };
-function makeAjax(){
-        $("#map1").empty();
+
+$(document).ready(function () { 
+    
+    initMap();
+    
+    function makeAjax(){
         $.ajax({
             url: 'https://data.cityofchicago.org/resource/9rg7-mz9y.json',
             method: 'GET',
@@ -66,8 +72,6 @@ function makeAjax(){
         y = (ln - lng0)*Math.cos(lat0);
         return deglen*Math.sqrt(x*x + y*y);
     }
-$(document).ready(function () { 
+        
     
-    makeAjax();
-  
 });
