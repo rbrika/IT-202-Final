@@ -45,14 +45,14 @@ $(document).ready(function () {
                           '<div id="content">'+
                               '<div id="siteNotice">'+
                               '</div>'+
-                               '<h1 id="firstHeading" class="firstHeading"> District' 
+                               '<h1 id="firstHeading" class="firstHeading"> District ' 
                                 +v.district+ 
                                 '</h1>'+
                                 '<div id="bodyContent">'+
                                 '<b>Address: '+v.address+' '+v.city+
                                 ' '+v.state+' '+v.zip+'</b>'+
                                 '<br><br><b>Phone Number: '+v.phone+
-                                '</b><br><br><b>Distance from your current location: '+result+'</b>'+
+                                '</b><br><br><b>Distance in km from your current location: '+Number((result).toFixed(2))+'</b>'+
                                 '</div>'+
                           '</div>'
                   });
