@@ -24,6 +24,7 @@ $(document).ready(function () {
     initMap();
     makeAjax();
     function makeAjax(){
+        $("#map1").empty();
         $.ajax({
             url: 'https://data.cityofchicago.org/resource/9rg7-mz9y.json',
             method: 'GET',
